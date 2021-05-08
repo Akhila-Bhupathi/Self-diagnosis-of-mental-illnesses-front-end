@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Login.css";
 import { GoogleLogin } from "react-google-login";
+import Reg from './Reg';
 
 const success=(response)=>{
     console.log(response);
@@ -49,6 +50,7 @@ const Login = () => {
           onFailure={failure}
           cookiePolicy={"single_host_origin"}
         />
+        <Reg />
       </div>
     </div>
   );

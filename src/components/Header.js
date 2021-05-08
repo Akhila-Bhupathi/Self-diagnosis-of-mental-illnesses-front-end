@@ -5,25 +5,30 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <div className="header__left">
+      <Link to="/" className="header__link">
         <div className="header__item">
-          <h1>Home</h1>
+          <span>HealThyMind</span>
         </div>
       </Link>
-
-      <Link to="/about" style={{ textDecoration: "none" }}>
+      </div>
+      <div className="header__right">
+      <Link to="/about" className="header__link">
         <div className="header__item">
-          <h1>About</h1>
+          <button>About</button>
         </div>
-      </Link>
+      </Link >
+      <Link  className="header__link">
+        <div className="header__item">
+          <button>Contact</button>
+        </div>
+      </Link >
+      <Link to="/login" className="header__link">
       <div className="header__item">
-        <h1>Contact us</h1>
-      </div>
-      <Link to="/login">
-      <div className="header__item">
-        <h1>Login</h1>
+        <button>Login</button>
       </div>
       </Link>
+      </div>
     </div>
   );
 };

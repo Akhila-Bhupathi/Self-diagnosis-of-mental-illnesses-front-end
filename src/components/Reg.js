@@ -1,12 +1,11 @@
 import React from 'react'
 
-const About = () => {
+function reg() {
     return (
         <div>
-            <h1></h1>
-            
+            <h1>Register</h1>
         </div>
     )
 }
 
-export default About
+export default reg
