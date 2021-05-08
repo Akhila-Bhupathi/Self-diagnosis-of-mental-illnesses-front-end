@@ -51,3 +51,8 @@
     font-weight: 800;
 
 }
+
+.active button{
+    color:white;
+    background-color: #15344a;
+}
