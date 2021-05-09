@@ -20,6 +20,10 @@ const success=(response)=>{
     }).then(response => response.json())
     .then(data => {
       console.log('Success:', data);
+      const id=data.id;
+      localStorage.setItem('id',id);
+      localStorage.setItem('email',data.email);
+      window.location.href = '/'; 
     })
     .catch((error) => {
       console.error('Error:', error);
