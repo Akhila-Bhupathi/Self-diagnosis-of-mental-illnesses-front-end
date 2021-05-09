@@ -1,8 +1,18 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../css/Header.css";
 import "./Header";
-import { NavLink } from "react-router-dom";
+import { NavLink,useHistory } from "react-router-dom";
+
 const Header = () => {
+  const id=localStorage.getItem('id');
+  const [login,setlogin]=useState(localStorage.getItem('id')!==null);
+  const history=useHistory();
+  useEffect(() => {
+    setlogin(localStorage.getItem('id')!==null)
+  }, []);
+
+  console.log(login);
+
   return (
     <div className="header">
       <div className="header__left">
@@ -23,11 +33,19 @@ const Header = () => {
           <button>Contact</button>
         </div>
       </NavLink >
-      <NavLink to="/login" className="header__link" activeClassName="active">
+     {!login ? <NavLink to="/login" className="header__link" activeClassName="active">
       <div className="header__item">
         <button>Login</button>
       </div>
       </NavLink>
+        :
+      <div className="header__item">
+        <button onClick={()=>{
+          localStorage.clear();
+          setlogin(localStorage.getItem('id')!==null)
+          history.push('/');
+        }}>Logout</button>
+      </div> }
       </div>
     </div>
   );
