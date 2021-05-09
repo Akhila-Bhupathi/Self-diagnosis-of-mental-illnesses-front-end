@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*background-color:#15344a;*/
+    /*background-color:teal #15344a;*/
     border-bottom: 2px solid whitesmoke;
     box-shadow: 2px 0px 10px -2px black;
     position: fixed;
@@ -30,23 +30,23 @@
 
 .header__item button{
     padding: 5px 20px 5px 20px;
-    color: #15344a;
+    color: teal ;
     font-size: 20px;
     font-weight: 900;
     background-color: white;
-    border: 2px solid #15344a;
+    border: 2px solid teal ;
     border-radius: 20px;
     width: 100%;
 }
 
 .header__item button:hover{
     color:#fff;
-    background-color: #15344a;
+    background-color: teal ;
     cursor: pointer;
 }
 
 .header__item span{
-    color:#15344a;
+    color:teal ;
     font-size: 40px;
     font-weight: 800;
 
@@ -54,5 +54,5 @@
 
 .active button{
     color:white;
-    background-color: #15344a;
+    background-color: teal ;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Login.css";
 import { GoogleLogin } from "react-google-login";
-import Reg from './Reg';
+import Reg from './RegisterLogin';
 
 const success=(response)=>{
     console.log(response);
@@ -33,6 +33,7 @@ const failure=(response)=>{
 const Login = () => {
   return (
     <div className="login">
+      <Reg />
       <div className="login__google">
         <GoogleLogin
           clientId="130831181306-gn9rouj8214vhp3qr7dju1dfe9e2bdbs.apps.googleusercontent.com"
@@ -40,7 +41,7 @@ const Login = () => {
             <button
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
-              style={{padding:'10px',borderRadius:'5px',backgroundColor:'#15344a',color:'#fff',cursor:'pointer'}}
+              style={{padding:'10px',borderRadius:'10px',backgroundColor:'turquoise',color:'black',cursor:'pointer',width:'100%',}}
             >
               Google login
             </button>
@@ -50,7 +51,7 @@ const Login = () => {
           onFailure={failure}
           cookiePolicy={"single_host_origin"}
         />
-        <Reg />
+        
       </div>
     </div>
   );
