@@ -13,7 +13,13 @@ function RegisterLogin() {
 
   const register=()=>{
     // alert("email:"+email+"---pas"+password+"----repeat"+repeatpassword);
-    let data={
+    if(password!==repeatpassword){
+      alert("Passwords didn't match. Try again");
+      setPassword("");
+      setRepeatPassword("");
+    }
+    else{
+      let data={
         email:email,
         password:password,
     }
@@ -32,8 +38,11 @@ function RegisterLogin() {
       history.push('/');
     })
     .catch((error) => {
+      alert("User already exists. Please try login")
+      history.push("/login");
       console.error('Error:', error);
     });
+    }
   }
 
   const loginhandle=()=>{
@@ -56,6 +65,8 @@ function RegisterLogin() {
       window.location.href = '/'; 
     })
     .catch((error) => {
+      alert("Something went wrong. Please try login")
+      history.push("/login");
       console.error('Error:', error);
     });
 
@@ -72,15 +83,15 @@ function RegisterLogin() {
             value={emailforlogin}
             onChange={(e) => setEmailForLogin(e.target.value)}
           />
-          <p></p>
+          
           <label>Password</label>
           <input
             type="password"
             value={passwordforlogin}
             onChange={(e) => setPasswordForLogin(e.target.value)}
           />
-          <p></p>
-          <button className="login__submit" onClick={loginhandle}>Login</button>
+          <br/>
+          <button className="login__submit" onClick={loginhandle}>Login</button><br/>
           <p className="signin__request">
             If you don't have account please register{" "}
             <span className="signin__span" onClick={() => setLogin(!login)}>
@@ -98,21 +109,18 @@ function RegisterLogin() {
           value={email}
           onChange={(e)=>setEmail(e.target.value)}
           />
-          <p></p>
           <label>Password</label>
           <input 
           type="password"
           value={password}
           onChange={(e)=>setPassword(e.target.value)}
           />
-          <p></p>
           <label>Confirm password</label>
           <input 
           type="password"
           value={repeatpassword}
           onChange={(e)=>setRepeatPassword(e.target.value)}
            />
-          <p></p>
           <button className="register__submit" onClick={()=>register()}>Register</button>
           <p className="login__request">
             Click{" "}

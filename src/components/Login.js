@@ -36,8 +36,11 @@ const failure=(response)=>{
 
 const Login = () => {
   return (
+    <div className="con">
+    <div className="log">
+     
     <div className="login">
-      <Reg />
+    <Reg />
       <div className="login__google">
         <GoogleLogin
           clientId="130831181306-gn9rouj8214vhp3qr7dju1dfe9e2bdbs.apps.googleusercontent.com"
@@ -57,6 +60,8 @@ const Login = () => {
         />
         
       </div>
+    </div>
+    </div>
     </div>
   );
 };
