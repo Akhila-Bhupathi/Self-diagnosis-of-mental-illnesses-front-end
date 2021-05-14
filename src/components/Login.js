@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Login.css";
 import { GoogleLogin } from "react-google-login";
 import Reg from './RegisterLogin';
+import imagelogin from '../images/loginimage.jpg';
 
 const success=(response)=>{
     console.log(response);
@@ -38,7 +39,9 @@ const Login = () => {
   return (
     <div className="con">
     <div className="log">
-     
+     <div className="login__image">
+        <img src={imagelogin} alt="" />
+     </div>
     <div className="login">
     <Reg />
       <div className="login__google">

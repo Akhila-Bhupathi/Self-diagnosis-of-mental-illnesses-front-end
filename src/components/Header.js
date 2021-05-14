@@ -18,11 +18,16 @@ const Header = () => {
       <div className="header__left">
       <NavLink to="/" className="header__link">
         <div className="header__item">
-          <span>HealThyMind</span>
+          <span>healthymind</span>
         </div>
       </NavLink>
       </div>
       <div className="header__right">
+       {login &&  <NavLink to="/dashboard" className="header__link" activeClassName="active">
+        <div className="header__item">
+          <button>Dashboard</button>
+        </div>
+      </NavLink >} 
       <NavLink to="/about" className="header__link" activeClassName="active">
         <div className="header__item">
           <button>About</button>
