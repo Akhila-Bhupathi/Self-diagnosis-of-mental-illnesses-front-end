@@ -35,7 +35,7 @@ function RegisterLogin() {
       const id=data.id;
       localStorage.setItem('id',id);
       localStorage.setItem('email',email);
-      history.push('/');
+      window.location.href = '/'; 
     })
     .catch((error) => {
       alert("User already exists. Please try login")

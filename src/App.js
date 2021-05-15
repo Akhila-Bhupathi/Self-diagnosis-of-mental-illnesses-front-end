@@ -5,6 +5,7 @@ import About from "./components/About";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path="/contact">
           <About/>
         </Route>
-        <Route exact path="/dashboard">
-          <Dashboard />
+        <Route  path="/dashboard">
+          <Sidebar/>
+    
         </Route>
         <Route exact path="/">
           <Home />

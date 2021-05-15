@@ -3,7 +3,8 @@ import "../css/Header.css";
 import "./Header";
 import { NavLink,useHistory } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
   const id=localStorage.getItem('id');
   const [login,setlogin]=useState(localStorage.getItem('id')!==null);
   const history=useHistory();
@@ -23,7 +24,8 @@ const Header = () => {
       </NavLink>
       </div>
       <div className="header__right">
-       {login &&  <NavLink to="/dashboard" className="header__link" activeClassName="active">
+       {
+       login &&  <NavLink to="/dashboard" className="header__link" activeClassName="active">
         <div className="header__item">
           <button>Dashboard</button>
         </div>
