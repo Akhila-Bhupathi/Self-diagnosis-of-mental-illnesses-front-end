@@ -1,0 +1,70 @@
+.account{
+    margin-left: 400px;
+    padding-top: 50px;
+}
+
+.account p{
+    margin:0;
+}
+
+.account__password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:800px;
+    padding-top: 60;
+    height:60vh;
+}
+
+.old_password,.new_password,.repeat_password,.change__password{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.account__email p{
+    font-size: 20px;
+    color:#15344a;
+    font-weight: 600;
+    padding-left:40px;
+}
+
+.account__password-title{
+    margin-top:50px !important;
+    color:teal;
+    font-size:40px;
+    font-weight: 400;
+}
+.account__password-p{
+    font-size: 20px;
+    color:#15344a;
+    font-weight: 400;
+}
+.account__password input{
+    height: 30px;
+    width: 400px;
+}
+
+.change__password button{
+    padding:10px 60px 10px 60px;
+    color:white;
+    background-color: turquoise;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+.change__password button:hover{
+    padding:10px 60px 10px 60px;
+    color:#15344a;
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 10px;
+    border: 1px solid #15344a;
+    cursor: pointer;
+}
