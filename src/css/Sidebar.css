@@ -18,12 +18,13 @@
 
 .sidebar__link{
     text-decoration: none;
+    
     width: 100%;
     background-color: white;
 }
 .sidebar__link p{
     width: 100%;
-    padding-top:5px;
+    
     font-size: 20px;
     color:teal;
     font-weight: 400;

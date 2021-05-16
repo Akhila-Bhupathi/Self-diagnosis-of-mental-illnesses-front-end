@@ -1,6 +1,11 @@
 import React from 'react';
 import {NavLink,Link,Route,Switch,useRouteMatch} from 'react-router-dom';
 import '../css/Sidebar.css';
+import Questionnaire from './Questionnaire';
+import MyReports from './MyReports';
+import MyAccount from './MyAccount';
+import Dashboard from './DashboardHome';
+
 
 function Sidebar() {
     //let { path, url } = useRouteMatch();
@@ -11,20 +16,25 @@ function Sidebar() {
            <NavLink to="/dashboard" className="sidebar__link" ><p>Home</p></NavLink>
            <NavLink to="/dashboard/questionnaire" className="sidebar__link" activeClassName="active-dash"><p>Questionnaire</p></NavLink>
            <NavLink to="/dashboard/reports" className="sidebar__link" activeClassName="active-dash"><p>My reports</p></NavLink>
+           <NavLink to="/dashboard/account" className="sidebar__link" activeClassName="active-dash"><p>My Account</p></NavLink>
             </div>
 
 
            
            <Switch>
                 <Route path="/dashboard/questionnaire">
-                    <h1 style={{marginLeft:'300px'}}>Questionnaire</h1>
+                   <Questionnaire />
                 </Route>
                
                <Route  path="/dashboard/reports">
-                    <h1 style={{marginLeft:'300px'}}>Reports</h1>
+                   <MyReports/>
+               </Route>
+               
+               <Route  path="/dashboard/account">
+                   <MyAccount/>
                </Route>
                <Route  path="/dashboard">
-                   <h1 style={{marginLeft:'300px'}}>Home</h1>
+                  <Dashboard/>
                </Route>
            </Switch>
         </div>
