@@ -115,3 +115,9 @@
     width:300px; 
     cursor: pointer;
 }
+
+.pred__loading{
+    font-size: 40px;
+    color:#15344a;
+    margin-top: 50px;
+}
