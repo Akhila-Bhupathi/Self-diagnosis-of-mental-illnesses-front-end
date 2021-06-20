@@ -6,6 +6,7 @@ import img1 from "../images/self_care.jpg";
 import Modal from "react-modal";
 import Prediction from './Prediction';
 import {useHistory} from 'react-router-dom';
+Modal.setAppElement("#root");
 
 function Questionnaire() {
   const [questions, setQuestions] = useState([]);
@@ -19,7 +20,7 @@ function Questionnaire() {
   const history=useHistory();
 
   useEffect(() => {
-    fetch("http://localhost:5000/questions", {
+    fetch("http://localhost:5000/questions?id="+localStorage.getItem('id'), {
       headers: {
         "Content-Type": "application/json",
       },

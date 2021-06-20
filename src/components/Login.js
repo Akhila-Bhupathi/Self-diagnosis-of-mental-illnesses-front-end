@@ -45,7 +45,7 @@ const Login = () => {
     <div className="login">
     <Reg />
       <div className="login__google">
-        <GoogleLogin
+        {/* <GoogleLogin
           clientId="130831181306-gn9rouj8214vhp3qr7dju1dfe9e2bdbs.apps.googleusercontent.com"
           render={(renderProps) => (
             <button
@@ -60,7 +60,7 @@ const Login = () => {
           onSuccess={success}
           onFailure={failure}
           cookiePolicy={"single_host_origin"}
-        />
+        /> */}
         
       </div>
     </div>

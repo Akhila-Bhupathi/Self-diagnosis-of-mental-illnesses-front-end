@@ -9,12 +9,12 @@
    padding:20px 20px 15px 20px;
     top:0;
     z-index: 100;
-    width: 100vw;
+    width: 100%;
     background-color: white;
 }
 
 .header__right{
-    width:700px;
+    width:50vw;
     display:flex;
     padding-right: 20px;
     justify-content: space-around;
