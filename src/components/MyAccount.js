@@ -39,27 +39,32 @@ function MyAccount() {
     }
     return (
         <div className="account">
+{/*             
             <div className="account__email">
                 <p>Email - {localStorage.getItem('email')}</p>
             </div>
-            <div className="account__password">
-                <p className="account__password-title">Change Password</p>
-                <div className="old_password">
-                <p className="account__password-p">Old Password</p>
-                <input type="password" value={oldpassword} onChange={(e)=>setOldpassword(e.target.value)} />
-                </div>
-                <div className="new_password">
-                <p className="account__password-p">New Password</p>
-                <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-                </div>
-                <div className="repeat_password">
-                <p className="account__password-p">Repeat Password</p>
-                <input type="password" value={repeatpassword} onChange={(e)=>setRepeatPassword(e.target.value)} />
-                </div>
-                <div className="change__password">
-                    <button onClick={handlePassword}>Change password</button>
+             */}
+            <div className="container-1">
+                <div className="account__password">
+                    <p className="account__password-title">Change Password</p>
+                    <div className="old_password">
+                        <p className="account__password-p">Old Password</p>
+                        <input type="password" value={oldpassword} onChange={(e)=>setOldpassword(e.target.value)} />
+                    </div>
+                    <div className="new_password">
+                        <p className="account__password-p">New Password</p>
+                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                        </div>
+                    <div className="repeat_password">
+                        <p className="account__password-p">Repeat Password</p>
+                        <input type="password" value={repeatpassword} onChange={(e)=>setRepeatPassword(e.target.value)} />
+                    </div>
+                    <div className="change__password">
+                        <button onClick={handlePassword}>Change password</button>
+                    </div>
                 </div>
             </div>
+            
         </div>
     )
 }
