@@ -2,10 +2,12 @@
   border: 3px solid teal;
   border-radius: 10px;
   box-shadow: 10px 10px powderblue;
-  margin-left: 450px;
+  margin-left: 400px;
   margin-right: 100px;
-  padding-top: 50px;
-  width: 50%;
+  padding-top: 20px;
+  width: 50vw;
+  display: flex;
+  align-items: center;
 }
 
 .account {
@@ -24,7 +26,7 @@
   align-items: center;
   width: 700px;
   padding-top: 0;
-  height: 60vh;
+  height: 63vh;
 }
 
 .old_password,
